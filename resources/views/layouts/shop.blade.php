@@ -44,7 +44,7 @@
                         </a>
                         <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
                             @if($user->isShopManager())
-                                <a class="dropdown-item" href="{{ domain_route('shop.admin.home') }}">Shop Dashboard</a>
+                                <a class="dropdown-item" href="#">Shop Dashboard</a>
                             @else
                             <a class="dropdown-item" href="#">Settings</a>
                             <a class="dropdown-item" href="#">My Orders</a>

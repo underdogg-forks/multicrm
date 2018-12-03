@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.admin')
 
 @section('title', 'Панель управления')
 
@@ -11,13 +11,13 @@
             <a href="{{ route('app.home') }}" class="btn btn-outline-secondary" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
                 <i class="fas fa-power-off"></i> Logout
             </a>
-            <form id="logout-form" action="{{ route('app.logout') }}" method="POST" style="display: none;">{{ csrf_field() }}</form>
+            <form id="logout-form" action="#" method="POST" style="display: none;">{{ csrf_field() }}</form>
 
             <a href="{{ route('app.registration') }}" class="btn btn-primary">
                 Create new shop
             </a>
             @if($user->isAppAdmin())
-                <a href="{{ route('admin.home') }}" class="btn btn-outline-primary">
+                <a href="#" class="btn btn-outline-primary">
                     Go to App Control Panel &rarr;
                 </a>
             @endif

@@ -19,7 +19,7 @@
 <body>
 <div class="sidebar-main">
     <div class="sidebar-header">
-        <a href="{{ domain_route('shop.admin.home') }}" title="{{ config('app.name') }}"><img src="{{ asset('shop/admin/img/logo.png') }}"></a>
+        <a href="#" title="{{ config('app.name') }}"><img src="{{ asset('shop/admin/img/logo.png') }}"></a>
     </div>
     <ul class="sidebar-nav">
         <li class="nav-item active"><a class="item" href="#" title="Dashboard"><i class="icon fas fa-home"></i></a></li>
@@ -32,7 +32,7 @@
 </div>
 
 <nav class="navbar navbar-expand-lg navbar-light justify-content-between">
-    <a class="navbar-brand" href="{{ domain_route('shop.admin.home') }}">{{ shop()->company_name }}</a>
+    <a class="navbar-brand" href="#">{{ shop()->company_name }}</a>
 
 
 

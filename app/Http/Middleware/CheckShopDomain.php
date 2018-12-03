@@ -18,10 +18,10 @@ class CheckShopDomain
 
         $subdomain = $request->route('subdomain');
         $shop = \App\Shop::where('domain', $subdomain)->first();
-        if (!$shop) {
-            // @todo redirect to not exists page
-            return redirect()->route('app.home');
-        }
+        //if (!$shop) {
+        //   // @todo redirect to not exists page
+        //    return redirect()->route('app.home');
+        //}
         // @todo:
 
         // 1. Is not active -> redirect to not active page

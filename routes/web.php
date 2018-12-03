@@ -12,14 +12,32 @@
 */
 
 
+Route::get('/orders', function () {
+return view('app.orders');
+});
+
+Route::get('/customers', function () {
+return view('app.customers');
+});
+
+Route::get('/settings', function () {
+return view('app.settings');
+});
+
+
+
+
+
+
+
+
 /* GENERAL APP : LOGIN, REGISTRATION AND SIMPLE DASHBOARD*/
 Route::group(
     [
-        'domain' => 'app.' . config('app.domain'),
         'as' => 'app.'
     ],
     function () {
-        Route::get('/', 'DashboardController@home')->name('home');
+        Route::get('/', 'DashboardController@home')->name('app.home');
 
         Route::get('/login', 'Auth\LoginController@showLoginForm')->name('login');
         Route::post('/login', 'Auth\LoginController@handleLogin')->name('login.post');
@@ -33,7 +51,6 @@ Route::group(
 /* SUPER ADMIN : SERVICE MANAGEMENT */
 Route::group(
     [
-        'domain' => 'admin.' . config('app.domain'),
         'middleware' => ['auth', 'app.is_admin'],
         'as' => 'admin.'
     ],
@@ -48,8 +65,6 @@ Route::group(
 /* SHOP ROUTES */
 Route::group(
     [
-        'domain' => '{subdomain}.' . config('app.domain'),
-        'middleware' => 'shop.domain',
         'as' => 'shop.'
     ], function () {
 
